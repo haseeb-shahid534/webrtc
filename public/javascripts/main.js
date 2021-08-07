@@ -170,7 +170,7 @@ function connectToNewUser(userId, stream) {
   if (isPresentor) {
     const call = myPeer.call(userId, stream)
     const recived_video = document.createElement("video")
-    console.log(peersList);
+    console.log(peersList)
     debugger
     // listen to the event whem they send us back their stream
     // taking the stream from the other user we are calling and adding it to our own 'recived_video' element
