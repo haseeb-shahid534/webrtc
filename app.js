@@ -11,9 +11,6 @@ var sassMiddleware = require('node-sass-middleware');
 var app = express();
 var httpRedir = express();
 
-/* IMPORT MODULES FROM OUR ROUTES DIRECTORY */ 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
 
 // import body-parser in order to parse body from POST
 var bodyParser = require('body-parser');
@@ -44,9 +41,6 @@ app.use(sassMiddleware({
 // to serve all the static files in the /public
 app.use(express.static(path.join(__dirname, 'public')));
 
-// route-handling
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
 
 /* ADDS HANDLER METHODS FOR ERRORS AND HTTP 404 RESPONSES */
 // catch 404 and forward to error handler
